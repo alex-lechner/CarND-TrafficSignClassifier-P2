@@ -62,11 +62,11 @@ My final model results were:
 
 Here are five German traffic signs that I found on the web:
 
-[image1](./traffic-signs/1.jpg "Turn left ahead")
-[image2](./traffic-signs/2.jpg "Speed limit (70km/h)")
-[image3](./traffic-signs/3.jpg "General caution")
-[image4](./traffic-signs/4.jpg "No entry")
-[image5](./traffic-signs/5.jpg "Bicycles crossing")
+![image1](./traffic-signs/1.jpg "Turn left ahead")
+![image2](./traffic-signs/2.jpg "Speed limit (70km/h)")
+![image3](./traffic-signs/3.jpg "General caution")
+![image4](./traffic-signs/4.jpg "No entry")
+![image5](./traffic-signs/5.jpg "Bicycles crossing")
 
 The first image might be difficult to classify because ...
 
