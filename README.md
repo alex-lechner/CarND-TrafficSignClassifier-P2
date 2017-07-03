@@ -39,7 +39,6 @@ My final model consisted of the following layers:
 | Convolution       	| 1x1 stride, valid padding, outputs 28x28x3 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride, same padding, outputs 14x14x6 	|
-| Dropout				|												|
 | Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x16	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride, same padding, outputs 5x5x16 		|
@@ -52,18 +51,20 @@ My final model consisted of the following layers:
 | Dropout				|												|
 | Logits/Output layer   | Output 43 									|
  
-After the train and valdiation process I tested my model against the test dataset. The accuracy is 91.6%.
+After the train and valdiation process I tested my model against the test dataset. The accuracy is 92.6%.
 
 * learning rate is 0.001
-* epochs is 15
+* epochs is 20
 * batch size is 128
-* dropout for train data is 0.75
+* dropout for train data is 0.7
 * dropout for validation and test data is 1
 
 My final model results were:
-* training set accuracy of 99.2%
-* validation set accuracy of 92.6% 
-* test set accuracy of 91.6%
+* training set accuracy of 98.9%
+* validation set accuracy of 93.4% 
+* test set accuracy of 92.6%
+
+Note: The Training and Validation Accuracy stopped increasing after the 18th epoch so early stopping could be a good solution for my model.
 
 ### Test a model on new images
 
@@ -78,11 +79,11 @@ Here are five German traffic signs that I found on the web:
 The first four images were classified correctly which might be because of the clear combination between the symbol and the shape of the traffic sign. The "no entry" sign for example is clearly unique and there isn't really a similar traffic sign which makes it easier for the CNN to classify it.
 The last image might be difficult to classify because the traffic sign is cropped and the "bicycles crossing" label might not have had enough images to train or the train images were either too different or not similar enough to my provided image. If we search for "bicycles crossing traffic sign" we can see that there are many different variations of that sign: yellow squares, red-white triangles or sometimes with stick figures included.
 Also what's interesting to note on the "bicycles crossing"-sign are the top 5 largest probabilities:
-1. Ahead only
-2. Turn right ahead
-3. No passing for vehicles over 3.5 metric tons
-4. Road work
-5. No passing
+1. No passing
+2. No passing for vehicles over 3.5 metric tons
+3. Speed limit (60km/h)
+4. Ahead only
+5. Vehicles over 3.5 metric tons prohibited
 
 Here are the results of the prediction:
 
@@ -92,7 +93,7 @@ Here are the results of the prediction:
 | Speed limit (70km/h)  | Speed limit (70km/h) 							|
 | General caution       | General caution		     					|
 | No entry	      		| No entry				    	 				|
-| Bicycles crossing		| Ahead only        							|
+| Bicycles crossing		| No passing        							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
